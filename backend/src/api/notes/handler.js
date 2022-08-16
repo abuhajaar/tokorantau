@@ -16,13 +16,13 @@ class NotesHandler {
   async postNoteHandler(request, h) {
     try {
       this._validator.validateNotePayload(request.payload);
-      const { title = 'untitled', body, tags } = request.payload;
+      const { title = 'untitled', price, category } = request.payload;
 
-      const noteId = await this._service.addNote({ title, body, tags });
+      const noteId = await this._service.addNote({ title, price, category });
 
       const response = h.response({
         status: 'success',
-        message: 'Catatan berhasil ditambahkan',
+        message: 'Produk berhasil ditambahkan',
         data: {
           noteId,
         },
@@ -94,14 +94,14 @@ class NotesHandler {
   async putNoteByIdHandler(request, h) {
     try {
       this._validator.validateNotePayload(request.payload);
-      const { title, body, tags } = request.payload;
+      const { title, price, category } = request.payload;
       const { id } = request.params;
 
-      await this._service.editNoteById(id, { title, body, tags });
+      await this._service.editNoteById(id, { title, price, category });
 
       return {
         status: 'success',
-        message: 'Catatan berhasil diperbarui',
+        message: 'Produk berhasil diperbarui',
       };
     } catch (error) {
       if (error instanceof ClientError) {
@@ -131,7 +131,7 @@ class NotesHandler {
 
       return {
         status: 'success',
-        message: 'Catatan berhasil dihapus',
+        message: 'Produk berhasil dihapus',
       };
     } catch (error) {
       if (error instanceof ClientError) {

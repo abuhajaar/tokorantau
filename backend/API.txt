@@ -1,0 +1,19 @@
+Standar Api
+
+{root.api}/{grouping}/{endpoint}
+Sample:
+http://18.140.7.182:5000/
+
+GROUP: Auth
+
+[1] -Login 
+[2] -Register
+
+GROUP: Produk
+
+[1] -Create Produk 
+{root.api}/Produk
+
+[2] -Get Produk
+[3] -Update Produk
+[4] -Delete Produk

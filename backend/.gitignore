@@ -3,3 +3,5 @@ node_modules
 ssh.txt
 .env
 .prod.env
+toko-rantau-fra.pem
+INSTALL-server.txt

@@ -12,14 +12,14 @@ class NotesService {
     this._pool = new Pool();
   }
 
-  async addNote({ title, body, tags }) {
+  async addNote({ title, price, category }) {
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
 
     const query = {
       text: 'INSERT INTO notes VALUES($1, $2, $3, $4, $5, $6) RETURNING id',
-      values: [id, title, body, tags, createdAt, updatedAt],
+      values: [id, title, price, category, createdAt, updatedAt],
     };
 
     const result = await this._pool.query(query);
@@ -49,11 +49,11 @@ class NotesService {
     return result.rows.map(mapDBToModel)[0];
   }
 
-  async editNoteById(id, { title, body, tags }) {
+  async editNoteById(id, { title, price, category }) {
     const updatedAt = new Date().toISOString();
     const query = {
-      text: 'UPDATE notes SET title = $1, body = $2, tags = $3, updated_at = $4 WHERE id = $5 RETURNING id',
-      values: [title, body, tags, updatedAt, id],
+      text: 'UPDATE notes SET title = $1, price = $2, category = $3, updated_at = $4 WHERE id = $5 RETURNING id',
+      values: [title, price, category, updatedAt, id],
     };
 
     const result = await this._pool.query(query);

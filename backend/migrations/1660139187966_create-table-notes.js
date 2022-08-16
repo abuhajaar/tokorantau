@@ -12,8 +12,8 @@ exports.up = (pgm) => {
       type: 'TEXT',
       notNull: true,
     },
-    body: {
-      type: 'TEXT',
+    price: {
+      type: 'INTEGER',
       notNull: true,
     },
     tags: {
