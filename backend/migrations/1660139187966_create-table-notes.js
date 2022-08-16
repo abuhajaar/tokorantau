@@ -16,7 +16,7 @@ exports.up = (pgm) => {
       type: 'INTEGER',
       notNull: true,
     },
-    tags: {
+    category: {
       type: 'TEXT[]',
       notNull: true,
     },
