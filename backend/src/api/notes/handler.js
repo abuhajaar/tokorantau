@@ -51,11 +51,11 @@ class NotesHandler {
   }
 
   async getNotesHandler() {
-    const notes = await this._service.getNotes();
+    const produk = await this._service.getNotes();
     return {
       status: 'success',
       data: {
-        notes,
+        produk,
       },
     };
   }
