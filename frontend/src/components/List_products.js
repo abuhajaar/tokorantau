@@ -5,11 +5,14 @@ import { MdKeyboardArrowUp } from 'react-icons/md';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 const List_products = () => {
   const [count, setCount] = useState(1);
+  const maxCount = 99;
+  const minCount = 1;
+
   const incrementCount = () => {
-    setCount(count + 1);
+    if (count < maxCount) setCount(count + 1);
   };
   const decrementCount = () => {
-    setCount(count - 1);
+    if (count > minCount) setCount(count - 1);
   };
 
   return (
