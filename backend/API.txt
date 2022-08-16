@@ -4,6 +4,7 @@ Standar Api
 Sample:
 http://18.140.7.182:5000/
 
+tokorantau api = http://35.158.139.90:5000/
 GROUP: Auth
 
 [1] -Login 
