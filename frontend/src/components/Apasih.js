@@ -20,7 +20,14 @@ const Apasih = () => {
   return (
     <div>
       {dataProduk.map((data) => {
-        return <List_products key={data.id} />;
+        return (
+          <List_products
+            key={data.id}
+            title={data.title}
+            category={data.category}
+            price={data.price}
+          />
+        );
       })}
     </div>
   );
