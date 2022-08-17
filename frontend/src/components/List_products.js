@@ -4,10 +4,12 @@ import pizzaori from '../assets/pizzaori.png';
 import { MdKeyboardArrowUp } from 'react-icons/md';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
-const List_products = () => {
+const List_products = (props) => {
   const [count, setCount] = useState(1);
   const maxCount = 99;
   const minCount = 1;
+
+  const { title, category, price } = props;
 
   const incrementCount = () => {
     if (count < maxCount) setCount(count + 1);
@@ -27,174 +29,14 @@ const List_products = () => {
             className={classes.product__container__box__image}
           ></img>
           <a href="#" className={classes.product__container__box__category}>
-            makanan
+            {category}
           </a>
-          <div className={classes.product__container__box__name}>Baso aci</div>
+          <div className={classes.product__container__box__name}>{title}</div>
           <div className={classes.product__container__box__flex}>
             <div className={classes.product__container__box__flex__price}>
-              3€
+              {price}€
             </div>
 
-            <div className={classes.product__container__box__flex__qty}>
-              <h5 className={classes.product__container__box__flex__qty__value}>
-                {count}
-              </h5>
-              <div
-                className={classes.product__container__box__flex__qty__counter}
-              >
-                <button onClick={incrementCount}>
-                  <MdKeyboardArrowUp />
-                </button>
-                <button onClick={decrementCount}>
-                  <MdKeyboardArrowDown />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={classes.product__container__box}>
-          <img
-            src={pizzaori}
-            alt=""
-            className={classes.product__container__box__image}
-          ></img>
-          <a href="#" className={classes.product__container__box__category}>
-            makanan
-          </a>
-          <div className={classes.product__container__box__name}>Baso aci</div>
-          <div className={classes.product__container__box__flex}>
-            <div className={classes.product__container__box__flex__price}>
-              3€
-            </div>
-            <div className={classes.product__container__box__flex__qty}>
-              <h5 className={classes.product__container__box__flex__qty__value}>
-                {count}
-              </h5>
-              <div
-                className={classes.product__container__box__flex__qty__counter}
-              >
-                <button onClick={incrementCount}>
-                  <MdKeyboardArrowUp />
-                </button>
-                <button onClick={decrementCount}>
-                  <MdKeyboardArrowDown />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={classes.product__container__box}>
-          <img
-            src={pizzaori}
-            alt=""
-            className={classes.product__container__box__image}
-          ></img>
-          <a href="#" className={classes.product__container__box__category}>
-            makanan
-          </a>
-          <div className={classes.product__container__box__name}>Baso aci</div>
-          <div className={classes.product__container__box__flex}>
-            <div className={classes.product__container__box__flex__price}>
-              3€
-            </div>
-            <div className={classes.product__container__box__flex__qty}>
-              <h5 className={classes.product__container__box__flex__qty__value}>
-                {count}
-              </h5>
-              <div
-                className={classes.product__container__box__flex__qty__counter}
-              >
-                <button onClick={incrementCount}>
-                  <MdKeyboardArrowUp />
-                </button>
-                <button onClick={decrementCount}>
-                  <MdKeyboardArrowDown />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={classes.product__container__box}>
-          <img
-            src={pizzaori}
-            alt=""
-            className={classes.product__container__box__image}
-          ></img>
-          <a href="#" className={classes.product__container__box__category}>
-            makanan
-          </a>
-          <div className={classes.product__container__box__name}>Baso aci</div>
-          <div className={classes.product__container__box__flex}>
-            <div className={classes.product__container__box__flex__price}>
-              3€
-            </div>
-            <div className={classes.product__container__box__flex__qty}>
-              <h5 className={classes.product__container__box__flex__qty__value}>
-                {count}
-              </h5>
-              <div
-                className={classes.product__container__box__flex__qty__counter}
-              >
-                <button onClick={incrementCount}>
-                  <MdKeyboardArrowUp />
-                </button>
-                <button onClick={decrementCount}>
-                  <MdKeyboardArrowDown />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={classes.product__container__box}>
-          <img
-            src={pizzaori}
-            alt=""
-            className={classes.product__container__box__image}
-          ></img>
-          <a href="#" className={classes.product__container__box__category}>
-            makanan
-          </a>
-          <div className={classes.product__container__box__name}>Baso aci</div>
-          <div className={classes.product__container__box__flex}>
-            <div className={classes.product__container__box__flex__price}>
-              3€
-            </div>
-            <div className={classes.product__container__box__flex__qty}>
-              <h5 className={classes.product__container__box__flex__qty__value}>
-                {count}
-              </h5>
-              <div
-                className={classes.product__container__box__flex__qty__counter}
-              >
-                <button onClick={incrementCount}>
-                  <MdKeyboardArrowUp />
-                </button>
-                <button onClick={decrementCount}>
-                  <MdKeyboardArrowDown />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={classes.product__container__box}>
-          <img
-            src={pizzaori}
-            alt=""
-            className={classes.product__container__box__image}
-          ></img>
-          <a href="#" className={classes.product__container__box__category}>
-            makanan
-          </a>
-          <div className={classes.product__container__box__name}>Baso aci</div>
-          <div className={classes.product__container__box__flex}>
-            <div className={classes.product__container__box__flex__price}>
-              3€
-            </div>
             <div className={classes.product__container__box__flex__qty}>
               <h5 className={classes.product__container__box__flex__qty__value}>
                 {count}

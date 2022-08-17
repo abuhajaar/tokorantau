@@ -1,11 +1,12 @@
 import React from 'react';
+import Apasih from './components/Apasih';
 import List_products from './components/List_products';
 
 const App = () => {
   return (
     <div>
       <div>
-        <List_products />
+        <Apasih />
       </div>
     </div>
   );
