@@ -9,8 +9,8 @@ const Apasih = () => {
     Axios.get('http://35.158.139.90:5000/produk')
       .then((result) => {
         const responseAPI = result.data;
-        console.log(result.produk);
-        setDataProduk(responseAPI.produk);
+        console.log(result.data);
+        setDataProduk(responseAPI.data);
       })
       .catch((err) => {
         console.log('error: ', err);
@@ -19,8 +19,8 @@ const Apasih = () => {
 
   return (
     <div>
-      {dataProduk.map((produk) => {
-        return <List_products key={produk.id} />;
+      {dataProduk.map((data) => {
+        return <List_products key={data.id} />;
       })}
     </div>
   );
