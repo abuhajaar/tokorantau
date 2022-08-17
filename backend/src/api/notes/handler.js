@@ -54,9 +54,7 @@ class NotesHandler {
     const produk = await this._service.getNotes();
     return {
       status: 'success',
-      data: {
-        produk,
-      },
+      data: produk,
     };
   }
 
