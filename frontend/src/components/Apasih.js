@@ -6,7 +6,7 @@ const Apasih = () => {
   const [dataProduk, setDataProduk] = useState([]);
 
   useEffect(() => {
-    Axios.get('http://35.158.139.90:5000/produk')
+    Axios.get('http://localhost:5000/produk')
       .then((result) => {
         const responseAPI = result.data;
         console.log(result.data);
