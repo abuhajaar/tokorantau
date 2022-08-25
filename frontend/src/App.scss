@@ -1,1 +1,9 @@
-
+.content-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 21rem);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}

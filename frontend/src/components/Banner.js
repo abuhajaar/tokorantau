@@ -1,10 +1,11 @@
 import React from 'react';
 import './Banner.scss';
 
-const Banner = () => {
+const Banner = (props) => {
+  const { judul } = props;
   return (
     <div className="container">
-      <h1>Kategori Produk</h1>
+      <h1>{judul}</h1>
     </div>
   );
 };

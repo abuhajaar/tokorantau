@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from './List_products.module.scss';
+import './List_products.scss';
 import pizzaori from '../assets/pizzaori.png';
 import { MdKeyboardArrowUp } from 'react-icons/md';
 import { MdKeyboardArrowDown } from 'react-icons/md';
@@ -9,7 +9,7 @@ const List_products = (props) => {
   const maxCount = 99;
   const minCount = 1;
 
-  const { title, category, price } = props;
+  const { title, category, price, author } = props;
 
   const incrementCount = () => {
     if (count < maxCount) setCount(count + 1);
@@ -19,30 +19,27 @@ const List_products = (props) => {
   };
 
   return (
-    <section className={classes.product}>
-      <div className={classes.product__container}>
-        <div className={classes.product__container__box}>
-          <img
-            src={pizzaori}
-            alt=""
-            className={classes.product__container__box__image}
-          ></img>
-          <a href="#" className={classes.product__container__box__category}>
+    <section className="product">
+      <div className="container">
+        <div className="box">
+          <img src={pizzaori} alt="" className="image"></img>
+          <a href="#" className="category">
             {category}
           </a>
-          <div className={classes.product__container__box__name}>{title}</div>
-          <div className={classes.product__container__box__flex}>
-            <div className={classes.product__container__box__flex__price}>
-              €{price}/-
+          <div className="name">{title}</div>
+          <a href="#" className="author">
+            {author}
+          </a>
+          <div className="flex">
+            <div className="price">
+              <span className="grey">€</span>
+              {price}
+              <span className="grey">/-</span>
             </div>
 
-            <div className={classes.product__container__box__flex__qty}>
-              <h5 className={classes.product__container__box__flex__qty__value}>
-                {count}
-              </h5>
-              <div
-                className={classes.product__container__box__flex__qty__counter}
-              >
+            <div className="qty">
+              <h5 className="value">{count}</h5>
+              <div className="counter">
                 <button onClick={incrementCount}>
                   <MdKeyboardArrowUp />
                 </button>
