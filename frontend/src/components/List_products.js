@@ -33,7 +33,7 @@ const List_products = (props) => {
           <div className={classes.product__container__box__name}>{title}</div>
           <div className={classes.product__container__box__flex}>
             <div className={classes.product__container__box__flex__price}>
-              {price}€
+              €{price}/-
             </div>
 
             <div className={classes.product__container__box__flex__qty}>
