@@ -1,0 +1,37 @@
+@import './styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $Rubik;
+  width: 100%;
+  height: 200vh;
+}
+
+#root {
+  height: 100%;
+  scroll-behavior: smooth;
+  stop-opacity: 7rem;
+}
+
+*::selection {
+  background-color: $yellow;
+  color: $white;
+}
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $yellow;
+}

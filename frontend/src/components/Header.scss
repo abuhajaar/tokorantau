@@ -1,0 +1,292 @@
+@import './../styles/variables.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: $white;
+  border-bottom: $border;
+  width: 100%;
+
+  .flex.active {
+    background: $black;
+    transition: 0.5s ease all;
+  }
+
+  .flex {
+    padding: 1rem 1.5rem;
+    margin: 0 auto;
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .logo {
+      color: $black;
+      font-size: 2.1rem;
+      font-weight: 800;
+      text-decoration: none;
+      -webkit-text-fill-color: $red;
+      -webkit-text-stroke-width: 1.5px;
+
+      span {
+        -webkit-text-fill-color: $yellow;
+        -webkit-text-stroke-width: 1.5px;
+      }
+    }
+
+    navbar {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+
+        li {
+          position: relative;
+
+          a {
+            text-decoration: none;
+            font-size: 1.65rem;
+            color: $black;
+            margin: 0 1rem;
+            font-weight: 400;
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 2px;
+              background-color: $yellow;
+              left: 0;
+              bottom: -4px;
+              transition: ease 0.4s;
+            }
+
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .icons {
+      font-size: 1.7rem;
+      color: $black;
+      cursor: pointer;
+      align-items: center;
+      display: flex;
+      flex-wrap: nowrap;
+      a {
+        margin-left: 1.5rem;
+        font-weight: 400;
+        transition: 0.2s ease;
+        &:hover {
+          color: $yellow;
+        }
+      }
+
+      .btn {
+        display: none;
+      }
+
+      @media screen and (max-width: 968px) {
+        .btn {
+          display: block;
+        }
+      }
+    }
+    .profile {
+      display: none;
+    }
+    .profile.active {
+      background-color: $white;
+      border: $border;
+      padding: 1rem;
+      position: absolute;
+      text-align: center;
+      display: block;
+      top: 130%;
+      right: 0;
+      width: 20rem;
+      animation: fadeIn 0.5s linear;
+
+      @keyframes fadeIn {
+        0% {
+          transform: translateY(1rem);
+        }
+      }
+
+      .name {
+        color: $black;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2.3rem;
+        margin-bottom: 1rem;
+
+        .yellow-btn {
+          background-color: $yellow;
+          color: $black;
+          font-size: 1.4rem;
+          padding: 0.6rem 1rem;
+          cursor: pointer;
+          transition: 0.2s ease;
+          &:hover {
+            letter-spacing: 2px;
+            opacity: 0.8;
+          }
+        }
+
+        .red-btn {
+          background-color: $red;
+          color: $white;
+          font-size: 1.4rem;
+          padding: 0.6rem 1rem;
+          cursor: pointer;
+          transition: 0.2s ease;
+          &:hover {
+            letter-spacing: 2px;
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .account {
+        font-size: 1.4rem;
+        color: $light-color;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: $black;
+          padding: 0 5px;
+          transition: 0.2s ease all;
+          &:hover {
+            text-decoration: underline;
+            color: $yellow;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 968px) {
+      .profile.active {
+        width: 100%;
+        top: 100%;
+        margin-bottom: 1rem;
+
+        .name {
+          font-size: 1rem;
+        }
+
+        .flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 2rem;
+          margin-bottom: 1rem;
+          width: 15rem;
+
+          .yellow-btn {
+            background-color: $yellow;
+            color: $black;
+            font-size: 1rem;
+            padding: 0.6rem 1rem;
+            cursor: pointer;
+            transition: 0.2s ease;
+            &:hover {
+              letter-spacing: 2px;
+              opacity: 0.8;
+            }
+          }
+
+          .red-btn {
+            background-color: $red;
+            color: $white;
+            font-size: 1rem;
+            padding: 0.6rem 1rem;
+            cursor: pointer;
+            transition: 0.2s ease;
+            &:hover {
+              letter-spacing: 2px;
+              opacity: 0.8;
+            }
+          }
+        }
+        .account {
+          font-size: 1rem;
+          color: $light-color;
+          text-align: center;
+
+          a {
+            text-decoration: none;
+            color: $black;
+            padding: 0 5px;
+            transition: 0.2s ease all;
+            &:hover {
+              text-decoration: underline;
+              color: $yellow;
+            }
+          }
+        }
+      }
+
+      .logo {
+        font-size: 24px;
+        transition: 0.5s ease;
+      }
+
+      .icons {
+        font-size: 18px;
+      }
+
+      .navbar {
+        background: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        padding: 1rem 1rem;
+
+        transition: 0.3s;
+        border: $border;
+
+        .items {
+          margin: 0.3rem auto;
+          width: 100%;
+
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .navbar.active {
+        background: $white;
+        top: 100%;
+        width: 100%;
+        left: 0;
+
+        transition: 0.3s ease all;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
