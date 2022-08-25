@@ -1,8 +1,8 @@
 @import './../styles/variables.scss';
 
 .product {
-  padding: 2rem;
-  margin: 2rem auto;
+  max-width: 1280px;
+  margin: 0 auto;
 
   &__tittle {
     text-align: center;
