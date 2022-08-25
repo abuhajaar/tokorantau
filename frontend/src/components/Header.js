@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from './Header.scss';
+import './Header.scss';
 import { BiSearch } from 'react-icons/bi';
 import { BsCartCheck } from 'react-icons/bs';
 import { FaUserCircle } from 'react-icons/fa';
