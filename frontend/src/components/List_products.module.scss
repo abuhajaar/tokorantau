@@ -15,20 +15,18 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 33rem);
+    grid-template-columns: repeat(auto-fit, 21rem);
     justify-content: center;
     align-items: flex-start;
     gap: 5rem;
 
     &__box {
       border: $border;
-      padding: 2rem;
+      padding: 20px;
       position: relative;
       overflow: hidden;
-      cursor: pointer;
 
       &:hover {
-        transform: scale(1.05);
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
           rgba(0, 0, 0, 0.23) 0px 6px 6px;
         border-radius: 5px;
@@ -37,7 +35,7 @@
       transition: 0.4s ease all;
 
       &__image {
-        height: 20rem;
+        height: 13rem;
         width: 100%;
         object-fit: contain;
       }

@@ -20,7 +20,6 @@ const List_products = (props) => {
 
   return (
     <section className={classes.product}>
-      <h1 className={classes.product__tittle}>Latest Product</h1>
       <div className={classes.product__container}>
         <div className={classes.product__container__box}>
           <img

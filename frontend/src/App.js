@@ -4,6 +4,8 @@ import Hero from './components/Hero';
 import Banner from './components/Banner';
 
 import './App.scss';
+import Category from './components/Category';
+import List_products from './components/List_products';
 
 const App = () => {
   return (
@@ -11,6 +13,9 @@ const App = () => {
       <Header />
       <Hero />
       <Banner />
+      <Category />
+      <Banner />
+      <List_products />
     </div>
   );
 };
