@@ -7,6 +7,10 @@ import './App.scss';
 import Category from './components/Category';
 import List_products from './components/List_products';
 import Mention from './components/Mention';
+import Heading from './components/Heading';
+import About from './components/About';
+import Steps from './components/Steps';
+import Review from './components/Review';
 
 const App = () => {
   const [dataProduk, setDataProduk] = useState([]);
@@ -44,6 +48,10 @@ const App = () => {
         })}
       </div>
       <Mention />
+      <Heading />
+      <About />
+      <Steps />
+      <Review />
     </div>
   );
 };

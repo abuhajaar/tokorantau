@@ -1,0 +1,55 @@
+@import '../styles/variables.scss';
+
+.about {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .image {
+      flex: 1 1 22rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content {
+      flex: 1 1 20rem;
+      text-align: center;
+
+      h3 {
+        font-size: 2rem;
+        color: $black;
+        text-transform: capitalize;
+      }
+
+      p {
+        margin: 1rem 0;
+        color: $light-color;
+        font-size: 1.1rem;
+        line-height: 2;
+      }
+
+      .btn {
+        padding: 1rem 2rem;
+        background-color: $yellow;
+        display: inline-block;
+        text-decoration: none;
+        color: $black;
+        font-size: 1.1rem;
+        transition: 0.25s ease;
+
+        &:hover {
+          letter-spacing: 1px;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}

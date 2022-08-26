@@ -1,0 +1,41 @@
+@import '../styles/variables.scss';
+
+.steps {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .container-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1rem;
+
+    .box-steps {
+      text-align: center;
+      border: $border;
+      padding: 1.2rem;
+      background-color: $black;
+      color: $white;
+
+      img {
+        height: 6.5rem;
+        width: 100%;
+        object-fit: contain;
+        filter: invert(1);
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        padding: 1rem;
+        color: $yellow;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+    }
+  }
+}

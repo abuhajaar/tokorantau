@@ -47,6 +47,7 @@
 
         li {
           position: relative;
+          flex-wrap: nowrap;
 
           a {
             text-decoration: none;
@@ -68,6 +69,12 @@
 
             &:hover::after {
               width: 100%;
+            }
+          }
+
+          @media screen and (max-width: 1000px) {
+            a {
+              font-size: 1.3rem;
             }
           }
         }
@@ -94,7 +101,7 @@
         display: none;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 968px) {
         .btn {
           display: block;
         }
@@ -180,10 +187,11 @@
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 968px) {
       .profile.active {
         max-width: 250px;
-        top: 100%;
+        top: 120%;
+        right: 2rem;
         margin-bottom: 1rem;
 
         .name {

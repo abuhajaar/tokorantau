@@ -1,0 +1,39 @@
+@import '../styles/variables.scss';
+
+.review {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .slide-review {
+    border: $border;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 2rem;
+
+    img {
+      height: 7rem;
+      width: 7rem;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    p {
+      color: $light-color;
+      line-height: 1.5;
+      margin: 1rem 0;
+    }
+
+    .stars {
+      border: $border;
+      display: inline-block;
+      padding: 0.4rem 0.6rem;
+      margin: 0.75rem;
+      color: $yellow;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $yellow;
+  }
+}

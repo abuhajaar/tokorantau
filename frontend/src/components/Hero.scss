@@ -38,13 +38,17 @@
         text-transform: capitalize;
       }
 
-      a {
+      p {
         margin: 0.5rem 0;
-        cursor: pointer;
-        transition: 0.3s ease all;
-        &:hover {
-          color: $light-color;
-          text-decoration: underline;
+        font-size: 1.2rem;
+
+        a {
+          cursor: pointer;
+          transition: 0.3s ease all;
+          &:hover {
+            color: $light-color;
+            text-decoration: underline;
+          }
         }
       }
 
