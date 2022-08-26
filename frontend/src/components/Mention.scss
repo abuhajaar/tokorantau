@@ -1,15 +1,15 @@
 @import '../styles/variables.scss';
 
-.box-grid {
+.box-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
   max-width: 1280px;
   margin: 0.5rem auto 4rem;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem 2rem;
 
-  .container-category {
+  .container {
     border: $border;
     text-align: center;
     padding: 1rem;
@@ -25,17 +25,21 @@
     h5 {
       text-decoration: none;
       color: $black;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       text-transform: capitalize;
       font-weight: 500;
     }
 
-    &:hover {
-      background-color: $black;
-
-      .icon,
-      h5 {
-        color: $white;
+    a {
+      text-decoration: none;
+      color: $light-color;
+      transition: 0.2s ease-in;
+      font-size: 1rem;
+      text-transform: capitalize;
+      padding: 0.5rem 0;
+      display: block;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

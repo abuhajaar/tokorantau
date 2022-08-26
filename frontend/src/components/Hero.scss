@@ -21,6 +21,8 @@
     }
 
     .content {
+      display: flex;
+      flex-direction: column;
       flex: 1 1 23rem;
       text-align: center;
 
@@ -36,8 +38,14 @@
         text-transform: capitalize;
       }
 
-      p {
+      a {
         margin: 0.5rem 0;
+        cursor: pointer;
+        transition: 0.3s ease all;
+        &:hover {
+          color: $light-color;
+          text-decoration: underline;
+        }
       }
 
       .btn {
@@ -45,14 +53,14 @@
         padding: 0.7rem 1rem;
         font-size: 1.5rem;
         text-decoration: none;
-        margin: 1rem 0;
+        margin: 1rem auto;
         color: $black;
         background-color: $yellow;
         transition: 0.3s ease all;
-
+        max-width: 220px;
         &:hover {
           letter-spacing: 2px;
-          opacity: 0.8;
+          opacity: 0.9;
         }
       }
     }

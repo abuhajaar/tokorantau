@@ -6,6 +6,7 @@ import Axios from 'axios';
 import './App.scss';
 import Category from './components/Category';
 import List_products from './components/List_products';
+import Mention from './components/Mention';
 
 const App = () => {
   const [dataProduk, setDataProduk] = useState([]);
@@ -42,6 +43,7 @@ const App = () => {
           );
         })}
       </div>
+      <Mention />
     </div>
   );
 };

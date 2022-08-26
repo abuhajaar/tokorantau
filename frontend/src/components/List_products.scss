@@ -1,104 +1,190 @@
 @import './../styles/variables.scss';
 
-.product {
-  .container {
-    .box {
-      border: $border;
-      padding: 20px;
-      position: relative;
-      overflow: hidden;
+.box {
+  border: $border;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+
+  .mobile-flex {
+    position: relative;
+    display: none;
+
+    width: 100%;
+    button {
+      font-size: 1.3rem;
+      border: none;
+      cursor: pointer;
+      padding: 0.6rem;
+      transition: 0.23s ease all;
 
       &:hover {
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-          rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        border-radius: 5px;
+        opacity: 0.9;
+        transform: scale(1.1);
       }
+    }
 
-      transition: 0.4s ease all;
+    .mobile-view {
+      background-color: $black;
+      color: $white;
+    }
 
-      .image {
-        height: 13rem;
-        width: 100%;
-        object-fit: contain;
-      }
+    .mobile-add-cart {
+      background-color: $yellow;
+      color: $black;
+    }
+  }
 
-      .category {
-        font-size: 1.5rem;
-        color: $light-color;
+  @media screen and (max-width: 768px) {
+    .mobile-flex {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
 
-        &:hover {
-          color: $black;
-          text-decoration: underline;
-          letter-spacing: 1px;
-        }
-        transition: 0.2s ease all;
-      }
+    .quick-view,
+    .add-cart {
+      display: none;
+    }
+  }
 
-      .name {
+  .quick-view {
+    position: absolute;
+    top: 1rem;
+    height: 3rem;
+    width: 3rem;
+    border: $border;
+    background-color: $white;
+    cursor: pointer;
+    color: $black;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+    text-align: center;
+    left: -5rem;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .add-cart {
+    position: absolute;
+    top: 1rem;
+    height: 3rem;
+    width: 3rem;
+    border: $border;
+    background-color: $white;
+    cursor: pointer;
+    color: $black;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+    text-align: center;
+    right: -5rem;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 5px;
+
+    .quick-view {
+      left: 1rem;
+    }
+
+    .add-cart {
+      right: 1rem;
+    }
+  }
+
+  transition: 0.4s ease all;
+
+  .image {
+    height: 13rem;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .category {
+    font-size: 1.5rem;
+    color: $light-color;
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+      letter-spacing: 1px;
+    }
+    transition: 0.2s ease all;
+  }
+
+  .name {
+    color: $black;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: start;
+  }
+
+  .flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    .qty {
+      font-size: 1.1rem;
+      border: $border;
+      margin: 1rem 0;
+      gap: 1rem;
+      padding: 0.3rem 0.5rem;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: space-between;
+
+      .value {
+        font-weight: 400;
+        font-size: 1.3rem;
         color: $black;
-        font-size: 1.5rem;
-        font-weight: 500;
-        text-align: start;
+        margin-left: 5px;
       }
 
-      .flex {
+      .counter {
         display: flex;
-        gap: 1rem;
-        align-items: center;
-        margin-top: 1.5rem;
+        flex-direction: column;
+        gap: 0.2rem;
 
-        .qty {
-          font-size: 1.1rem;
-          border: $border;
-          margin: 1rem 0;
-          gap: 1rem;
-          padding: 0.3rem 0.5rem;
-          display: flex;
-          align-items: center;
-          text-align: center;
-          justify-content: space-between;
-
-          .value {
-            font-weight: 400;
-            font-size: 1.3rem;
-            color: $black;
-            margin-left: 5px;
-          }
-
-          .counter {
-            display: flex;
-            flex-direction: column;
-            gap: 0.2rem;
-
-            button {
-              cursor: pointer;
-              font-size: 0.6rem;
-              border: solid $white;
-              color: $black;
-
-              &:hover {
-                color: $white;
-                background-color: $black;
-              }
-
-              &:active {
-                transform: scale(0.9);
-              }
-
-              transition: 0.2s ease all;
-            }
-          }
-        }
-
-        .price {
-          font-size: 1.3rem;
-          margin-right: auto;
+        button {
+          cursor: pointer;
+          font-size: 0.6rem;
+          border: solid $white;
           color: $black;
 
-          .grey {
-            color: $light-color;
+          &:hover {
+            color: $white;
+            background-color: $black;
           }
+
+          &:active {
+            transform: scale(0.9);
+          }
+
+          transition: 0.2s ease all;
         }
+      }
+    }
+
+    .price {
+      font-size: 1.3rem;
+      margin-right: auto;
+      color: $black;
+
+      .grey {
+        color: $light-color;
       }
     }
   }
