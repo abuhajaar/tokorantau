@@ -35,16 +35,21 @@ const Register = () => {
 
         <input
           type="password"
-          name="cpass"
+          name="pass"
           required
           placeholder="Konfirmasi Password"
           class="input-register"
           maxlength="50"
         />
 
-        <input type="submit" value="register now" name="submit" class="btn" />
+        <input
+          type="submit"
+          value="daftar sekarang"
+          name="submit"
+          class="btn"
+        />
         <p>
-          already have an account? <a href="login.html">login now</a>
+          sudah punya akun? <a href="#">login sekarang</a>
         </p>
       </div>
     </div>

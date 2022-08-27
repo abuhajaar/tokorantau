@@ -1,20 +1,25 @@
-import { Axios } from 'axios';
+import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Heading from '../../components/Heading';
 import List_products from '../../components/List_products';
 import './List.scss';
+import ReactPaginate from 'react-paginate';
 
 const List = () => {
   const [post, setPost] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostPerPage] = useState(21);
+  const [postsPerPage, setPostPerPage] = useState(15);
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPost = post.slice(indexOfFirstPost, indexOfLastPost);
+  const pageVisited = currentPage * postsPerPage;
 
+  const currentPost = post.slice(pageVisited, pageVisited + postsPerPage);
+  const pageCount = Math.ceil(post.length / postsPerPage);
+
+  const changePage = ({ selected }) => {
+    setCurrentPage(selected);
+  };
   useEffect(() => {
     Axios.get('http://3.68.79.190:5000/produk')
       .then((result) => {
@@ -26,6 +31,7 @@ const List = () => {
         console.log('error: ', err);
       });
   }, []);
+
   return (
     <div>
       <Header />
@@ -43,6 +49,18 @@ const List = () => {
           );
         })}
       </div>
+      <ReactPaginate
+        previousLabel={'Previous'}
+        nextLabel={'Next'}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={'paginationBttns'}
+        previousLinkClassName={'previousBttn'}
+        nextLinkClassName={'nextBttn'}
+        disabledClassName={'paginationDisabled'}
+        activeClassName={'paginationActive'}
+      />
+
       <Footer />
     </div>
   );

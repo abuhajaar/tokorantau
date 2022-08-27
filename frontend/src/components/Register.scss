@@ -1,1 +1,67 @@
 @import '../styles/variables.scss';
+
+.register {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 80vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .register-box {
+    border: $border;
+    width: 28rem;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+      font-size: 1.6rem;
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    .input-register {
+      border: $border;
+      font-size: 1.2rem;
+      padding: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      background-color: $yellow;
+      border: none;
+      width: 12rem;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      padding: 0.6rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.25s ease;
+
+      &:hover {
+        opacity: 0.9;
+        letter-spacing: 2px;
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      color: $light-color;
+
+      a {
+        color: $black;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

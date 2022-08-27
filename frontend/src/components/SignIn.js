@@ -6,6 +6,7 @@ const SignIn = () => {
       <div className="login-box">
         <h3>Login</h3>
         <input
+          type="email"
           name="email"
           required
           placeholder="masukan email"
@@ -13,6 +14,7 @@ const SignIn = () => {
         />
 
         <input
+          type="pass"
           name="pass"
           required
           placeholder="masukan password"
