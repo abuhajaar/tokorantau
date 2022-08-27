@@ -1,12 +1,13 @@
 import React from 'react';
 import './Heading.scss';
-const Heading = () => {
+const Heading = (props) => {
+  const { judul, url } = props;
   return (
     <div className="heading">
-      <h3>Tentang Kami</h3>
+      <h3>{judul}</h3>
       <p>
         <a href="#">home</a>
-        <span> / about</span>
+        <span> /{url}</span>
       </p>
     </div>
   );

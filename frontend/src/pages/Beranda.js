@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Banner from './components/Banner';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Banner from '../components/Banner';
 import Axios from 'axios';
 import './App.scss';
-import Category from './components/Category';
-import List_products from './components/List_products';
-import Mention from './components/Mention';
-import Heading from './components/Heading';
-import About from './components/About';
-import Steps from './components/Steps';
-import Review from './components/Review';
-import Footer from './components/Footer';
-import View from './components/View';
+import Category from '../components/Category';
+import List_products from '../components/List_products';
+import Mention from '../components/Mention';
+import Heading from '../components/Heading';
+import About from '../components/About';
+import Steps from '../components/Steps';
+import Review from '../components/Review';
+import Footer from '../components/Footer';
+import View from '../components/View';
 
 const App = () => {
   const [post, setPost] = useState([]);
