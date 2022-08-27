@@ -16,7 +16,7 @@ const Home = () => {
   const [postsPerPage, setPostPerPage] = useState(6);
 
   useEffect(() => {
-    Axios.get('http://35.158.139.90:5000/produk')
+    Axios.get('http://3.68.79.190:5000/produk')
       .then((result) => {
         const responseAPI = result.data;
         console.log(result.data);
