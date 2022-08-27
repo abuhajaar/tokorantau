@@ -36,7 +36,7 @@ const Hero = () => {
             <p>
               Dibuat oleh <a>siapa</a>
             </p>
-            <a href="#" class="btn">
+            <a href="#" className="btn">
               Kunjungi Toko
             </a>
           </div>
@@ -51,7 +51,7 @@ const Hero = () => {
             <p>
               Dibuat oleh <a>siapa</a>
             </p>
-            <a href="#" class="btn">
+            <a href="#" className="btn">
               Kunjungi Toko
             </a>
           </div>
@@ -66,7 +66,7 @@ const Hero = () => {
             <p>
               Dibuat oleh <a>siapa</a>
             </p>
-            <a href="#" class="btn">
+            <a href="#" className="btn">
               Kunjungi Toko
             </a>
           </div>

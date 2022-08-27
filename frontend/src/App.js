@@ -11,21 +11,30 @@ import Heading from './components/Heading';
 import About from './components/About';
 import Steps from './components/Steps';
 import Review from './components/Review';
+import Footer from './components/Footer';
+import View from './components/View';
 
 const App = () => {
-  const [dataProduk, setDataProduk] = useState([]);
+  const [post, setPost] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostPerPage] = useState(6);
 
   useEffect(() => {
     Axios.get('http://35.158.139.90:5000/produk')
       .then((result) => {
         const responseAPI = result.data;
         console.log(result.data);
-        setDataProduk(responseAPI.data);
+        setPost(responseAPI.data);
       })
       .catch((err) => {
         console.log('error: ', err);
       });
   }, []);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPost = post.slice(indexOfFirstPost, indexOfLastPost);
+
   return (
     <div>
       <Header />
@@ -35,7 +44,7 @@ const App = () => {
       <Banner judul="Produk Terbaru" />
 
       <div className="content-wrapper">
-        {dataProduk.map((data) => {
+        {currentPost.map((data) => {
           return (
             <List_products
               key={data.id}
@@ -47,11 +56,10 @@ const App = () => {
           );
         })}
       </div>
-      <Mention />
-      <Heading />
-      <About />
-      <Steps />
+      <View />
+      <Banner judul="Ulasan Pelanggan" />
       <Review />
+      <Footer />
     </div>
   );
 };

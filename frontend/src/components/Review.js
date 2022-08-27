@@ -34,14 +34,14 @@ const Review = () => {
             iste, error commodi, exercitationem asperiores quas illum rerum
             reprehenderit, excepturi incidunt tempora totam odit amet eius.
           </p>
-          <div class="stars">
+          <div className="stars">
             <ImStarFull />
             <ImStarFull />
             <ImStarFull />
             <ImStarFull />
             <ImStarHalf />
           </div>
-          <h3 class="name">John doe</h3>
+          <h3 className="name">John doe</h3>
         </SwiperSlide>
         <SwiperSlide className="slide-review">
           <img src={review2} alt=""></img>
@@ -50,14 +50,14 @@ const Review = () => {
             iste, error commodi, exercitationem asperiores quas illum rerum
             reprehenderit, excepturi incidunt tempora totam odit amet eius.
           </p>
-          <div class="stars">
+          <div className="stars">
             <ImStarFull />
             <ImStarFull />
             <ImStarFull />
             <ImStarFull />
             <ImStarHalf />
           </div>
-          <h3 class="name">John doe</h3>
+          <h3 className="name">John doe</h3>
         </SwiperSlide>
         <SwiperSlide className="slide-review">
           <img src={review3} alt=""></img>
@@ -66,14 +66,14 @@ const Review = () => {
             iste, error commodi, exercitationem asperiores quas illum rerum
             reprehenderit, excepturi incidunt tempora totam odit amet eius.
           </p>
-          <div class="stars">
+          <div className="stars">
             <ImStarFull />
             <ImStarFull />
             <ImStarFull />
             <ImStarFull />
             <ImStarHalf />
           </div>
-          <h3 class="name">John doe</h3>
+          <h3 className="name">John doe</h3>
         </SwiperSlide>
         <SwiperSlide className="slide-review">
           <img src={review4} alt=""></img>
@@ -82,14 +82,14 @@ const Review = () => {
             iste, error commodi, exercitationem asperiores quas illum rerum
             reprehenderit, excepturi incidunt tempora totam odit amet eius.
           </p>
-          <div class="stars">
+          <div className="stars">
             <ImStarFull />
             <ImStarFull />
             <ImStarFull />
             <ImStarFull />
             <ImStarHalf />
           </div>
-          <h3 class="name">John doe</h3>
+          <h3 className="name">John doe</h3>
         </SwiperSlide>
       </Swiper>
     </div>
