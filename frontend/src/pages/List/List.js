@@ -49,17 +49,19 @@ const List = () => {
           );
         })}
       </div>
-      <ReactPaginate
-        previousLabel={'Previous'}
-        nextLabel={'Next'}
-        pageCount={pageCount}
-        onPageChange={changePage}
-        containerClassName={'paginationBttns'}
-        previousLinkClassName={'previousBttn'}
-        nextLinkClassName={'nextBttn'}
-        disabledClassName={'paginationDisabled'}
-        activeClassName={'paginationActive'}
-      />
+      <div className="pagination">
+        <ReactPaginate
+          previousLabel={'Previous'}
+          nextLabel={'Next'}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={'paginationBttns'}
+          previousLinkClassName={'previousBttn'}
+          nextLinkClassName={'nextBttn'}
+          disabledClassName={'paginationDisabled'}
+          activeClassName={'paginationActive'}
+        />
+      </div>
 
       <Footer />
     </div>

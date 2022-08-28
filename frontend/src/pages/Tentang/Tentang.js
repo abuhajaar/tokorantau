@@ -1,6 +1,7 @@
 import React from 'react';
 import About from '../../components/About';
 import Banner from '../../components/Banner';
+
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Heading from '../../components/Heading';
@@ -16,7 +17,7 @@ const Tentang = () => {
       <Banner judul="Langkah-Langkah" />
       <Steps />
       <Banner judul="Jajaran Direksi" />
-      <Mention />
+
       <Footer />
     </div>
   );
