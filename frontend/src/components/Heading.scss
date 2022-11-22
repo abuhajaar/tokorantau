@@ -22,6 +22,7 @@
       color: $yellow;
       text-decoration: none;
       transition: 0.25s ease;
+      cursor: pointer;
 
       &:hover {
         text-decoration: underline;

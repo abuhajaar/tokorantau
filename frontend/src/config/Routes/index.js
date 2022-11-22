@@ -52,7 +52,7 @@ const Routes = () => {
           <Pesanan />
         </Route>
 
-        <Route path="/produk">
+        <Route path="/produk/:id">
           <Produk />
         </Route>
 

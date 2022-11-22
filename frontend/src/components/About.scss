@@ -44,6 +44,8 @@
         color: $black;
         font-size: 1.1rem;
         transition: 0.25s ease;
+        border: none;
+        cursor: pointer;
 
         &:hover {
           letter-spacing: 1px;

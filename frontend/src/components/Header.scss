@@ -31,6 +31,9 @@
       text-decoration: none;
       -webkit-text-fill-color: $red;
       -webkit-text-stroke-width: 1.5px;
+      background-color: $white;
+      border: none;
+      cursor: pointer;
 
       span {
         -webkit-text-fill-color: $yellow;
@@ -49,12 +52,16 @@
           position: relative;
           flex-wrap: nowrap;
 
-          a {
+          button {
             text-decoration: none;
-            font-size: 1.65rem;
+            font-size: 1.5rem;
             color: $black;
-            margin: 0 1rem;
+            margin: 0.5rem 1rem;
             font-weight: 400;
+            background-color: $white;
+            border: none;
+            cursor: pointer;
+            font-family: $Rubik;
 
             &::after {
               content: '';
@@ -73,7 +80,7 @@
           }
 
           @media screen and (max-width: 1000px) {
-            a {
+            button {
               font-size: 1.3rem;
             }
           }
@@ -82,16 +89,20 @@
     }
 
     .icons {
-      font-size: 1.7rem;
-      color: $black;
       cursor: pointer;
       align-items: center;
       display: flex;
       flex-wrap: nowrap;
-      a {
+
+      .icon {
         margin-left: 1.5rem;
         font-weight: 400;
+        font-size: 1.7rem;
+        color: $black;
         transition: 0.2s ease;
+        cursor: pointer;
+        background-color: $white;
+        border: none;
         &:hover {
           color: $yellow;
         }
@@ -149,6 +160,8 @@
           padding: 0.6rem 1rem;
           cursor: pointer;
           transition: 0.2s ease;
+          text-decoration: none;
+          border: none;
           &:hover {
             letter-spacing: 2px;
             opacity: 0.8;
@@ -162,6 +175,8 @@
           padding: 0.6rem 1rem;
           cursor: pointer;
           transition: 0.2s ease;
+          text-decoration: none;
+          border: none;
           &:hover {
             letter-spacing: 2px;
             opacity: 0.8;
@@ -170,15 +185,19 @@
       }
 
       .account {
-        font-size: 1.4rem;
-        color: $light-color;
         text-align: center;
+        font-size: 1rem;
 
-        a {
+        button {
           text-decoration: none;
+
+          font-size: 1rem;
           color: $black;
           padding: 0 5px;
           transition: 0.2s ease all;
+          cursor: pointer;
+          background-color: $white;
+          border: none;
           &:hover {
             text-decoration: underline;
             color: $yellow;

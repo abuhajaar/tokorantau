@@ -1,8 +1,10 @@
 import React from 'react';
 import './About.scss';
 import about from '../assets/about.jpg';
+import { useHistory } from 'react-router-dom';
 
 const About = () => {
+  const history = useHistory();
   return (
     <div className="about">
       <div className="row">
@@ -17,9 +19,9 @@ const About = () => {
             ipsa ea ipsam omnis, nisi facilis velit eum facere, nostrum iste nam
             porro harum sed earum eaque culpa totam, eligendi necessitatibus?
           </p>
-          <a href="#" className="btn">
+          <button className="btn" onClick={() => history.push('/')}>
             Lihat Semua
-          </a>
+          </button>
         </div>
       </div>
     </div>

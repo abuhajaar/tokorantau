@@ -5,6 +5,7 @@ import { BsCartCheck } from 'react-icons/bs';
 import { FaUserCircle } from 'react-icons/fa';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { GrClose } from 'react-icons/gr';
+import { useHistory } from 'react-router-dom';
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -25,40 +26,42 @@ const Header = () => {
     setClick(false);
     setProfile(false);
   };
+
+  const history = useHistory();
   return (
     <header className="header">
       <section className={!showNav ? 'flex' : 'flex active'}>
-        <a href="#" className="logo">
+        <button className="logo" onClick={() => history.push('/')}>
           <span>Toko</span>Rantau
-        </a>
+        </button>
         <navbar>
           <ul className={click ? 'navbar active' : 'navbar'}>
             <li className="items" onClick={handleMobileClose}>
-              <a href="#">Home</a>
+              <button onClick={() => history.push('/list')}>Produk</button>
             </li>
             <li className="items" onClick={handleMobileClose}>
-              <a href="#">About us</a>
+              <button onClick={() => history.push('/tentang')}>
+                Tentang Kami
+              </button>
+            </li>
+
+            <li className="items" onClick={handleMobileClose}>
+              <button onClick={() => history.push('/pesanan')}>Pesanan</button>
             </li>
             <li className="items" onClick={handleMobileClose}>
-              <a href="#">Menu</a>
-            </li>
-            <li className="items" onClick={handleMobileClose}>
-              <a href="#">Order</a>
-            </li>
-            <li className="items" onClick={handleMobileClose}>
-              <a href="#">Contact</a>
+              <button onClick={() => history.push('/hubungi')}>Kontak</button>
             </li>
           </ul>
         </navbar>
 
         <div className="icons">
-          <a>
+          <button onClick={() => history.push('/cari')} className="icon">
             <BiSearch />
-          </a>
-          <a>
+          </button>
+          <button onClick={() => history.push('/keranjang')} className="icon">
             <BsCartCheck />
-          </a>
-          <a onClick={handleProfile}>
+          </button>
+          <a onClick={handleProfile} className="icon">
             <FaUserCircle />
           </a>
           <a className="btn" onClick={handleClick}>
@@ -69,11 +72,19 @@ const Header = () => {
         <div className={profile ? 'profile active' : 'profile'}>
           <p className="name">Adam Bisyahri</p>
           <div className="flex">
-            <a className="yellow-btn">Akun</a>
-            <a className="red-btn">Keluar</a>
+            <button
+              onClick={() => history.push('/akun')}
+              className="yellow-btn"
+            >
+              Akun
+            </button>
+            <button onClick={() => history.push('/')} className="red-btn">
+              Keluar
+            </button>
           </div>
           <p className="account">
-            <a href="#">Masuk</a> atau <a href="#">Daftar</a>
+            <button onClick={() => history.push('/login')}>Masuk</button> atau{' '}
+            <button onClick={() => history.push('/daftar')}>Daftar</button>
           </p>
         </div>
       </section>

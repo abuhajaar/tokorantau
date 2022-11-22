@@ -5,12 +5,12 @@
   padding: 20px;
   position: relative;
   overflow: hidden;
-
+  transition: 0.3s ease;
   .mobile-flex {
     position: relative;
     display: none;
-
     width: 100%;
+
     button {
       font-size: 1.3rem;
       border: none;
@@ -27,25 +27,22 @@
     .mobile-view {
       background-color: $black;
       color: $white;
-    }
-
-    .mobile-add-cart {
-      background-color: $yellow;
-      color: $black;
+      font-size: 1.3rem;
+      border: none;
+      cursor: pointer;
+      padding: 0.6rem;
+      transition: 0.23s ease all;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.9;
+        transform: scale(1.1);
+      }
     }
   }
 
-  @media screen and (max-width: 768px) {
-    .mobile-flex {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    .quick-view,
-    .add-cart {
-      display: none;
-    }
+  .mobile-add-cart {
+    background-color: $yellow;
+    color: $black;
   }
 
   .quick-view {
@@ -61,6 +58,7 @@
     transition: 0.2s linear;
     text-align: center;
     left: -5rem;
+    padding: 0.6rem;
 
     &:hover {
       background-color: $black;
@@ -102,8 +100,6 @@
     }
   }
 
-  transition: 0.4s ease all;
-
   .image {
     height: 13rem;
     width: 100%;
@@ -111,11 +107,11 @@
   }
 
   .category {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: $light-color;
 
     &:hover {
-      color: $black;
+      color: $yellow;
       text-decoration: underline;
       letter-spacing: 1px;
     }
@@ -124,9 +120,16 @@
 
   .name {
     color: $black;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 500;
     text-align: start;
+    margin: 0.25rem 0;
+  }
+
+  .author {
+    font-size: 1.1rem;
+    color: $light-color;
+    text-decoration: none;
   }
 
   .flex {
@@ -138,13 +141,14 @@
     .qty {
       font-size: 1.1rem;
       border: $border;
-      margin: 1rem 0;
+
       gap: 1rem;
       padding: 0.3rem 0.5rem;
       display: flex;
       align-items: center;
       text-align: center;
       justify-content: space-between;
+      margin-bottom: 0.4rem;
 
       .value {
         font-weight: 400;
@@ -186,6 +190,19 @@
       .grey {
         color: $light-color;
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .mobile-flex {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+
+    .quick-view,
+    .add-cart {
+      display: none;
     }
   }
 }

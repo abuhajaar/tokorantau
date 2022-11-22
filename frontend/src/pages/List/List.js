@@ -9,7 +9,7 @@ import ReactPaginate from 'react-paginate';
 
 const List = () => {
   const [post, setPost] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const [postsPerPage, setPostPerPage] = useState(15);
 
   const pageVisited = currentPage * postsPerPage;
@@ -35,7 +35,7 @@ const List = () => {
   return (
     <div>
       <Header />
-      <Heading judul="List Produk" url="list" />
+      <Heading judul="Daftar Produk" url="list" />
       <div className="content-wrapper">
         {currentPost.map((data) => {
           return (

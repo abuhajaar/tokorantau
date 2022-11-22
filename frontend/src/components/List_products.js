@@ -5,13 +5,15 @@ import { MdKeyboardArrowUp } from 'react-icons/md';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaEye } from 'react-icons/fa';
 import { BsFillCartPlusFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import data from '../pages/data';
 
 const List_products = (props) => {
   const [count, setCount] = useState(1);
   const maxCount = 99;
   const minCount = 1;
 
-  const { title, category, price, author } = props;
+  const { title, category, price, author, key } = props;
 
   const incrementCount = () => {
     if (count < maxCount) setCount(count + 1);
@@ -21,21 +23,20 @@ const List_products = (props) => {
   };
 
   return (
-    <div className="box">
-      <button className="quick-view">
+    <div className="box" key={key}>
+      <Link to={`/produk/${key}`} className="quick-view">
         <FaEye />
-      </button>
+      </Link>
       <button className="add-cart">
         <BsFillCartPlusFill />
       </button>
       <img src={pizzaori} alt="" className="image"></img>
+
+      <div className="name">{title}</div>
       <a href="#" className="category">
         {category}
       </a>
-      <div className="name">{title}</div>
-      <a href="#" className="author">
-        {author}
-      </a>
+
       <div className="flex">
         <div className="price">
           <span className="grey">€</span>
@@ -55,8 +56,14 @@ const List_products = (props) => {
           </div>
         </div>
       </div>
+
+      <Link to="/akun" className="author">
+        Dibuat oleh {author}
+      </Link>
       <div className="mobile-flex">
-        <button className="mobile-view">Kunjungi</button>
+        <Link to={'/produk/'} className="mobile-view">
+          Kunjungi
+        </Link>
         <button className="mobile-add-cart">Tambahkan</button>
       </div>
     </div>

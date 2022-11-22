@@ -9,13 +9,14 @@ import List_products from '../../components/List_products';
 import Review from '../../components/Review';
 import Footer from '../../components/Footer';
 import View from '../../components/View';
+import data from '../data';
 
 const Home = () => {
   const [post, setPost] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(6);
 
-  useEffect(() => {
+  /*useEffect(() => {
     Axios.get('http://3.68.79.190:5000/produk')
       .then((result) => {
         const responseAPI = result.data;
@@ -25,7 +26,7 @@ const Home = () => {
       .catch((err) => {
         console.log('error: ', err);
       });
-  }, []);
+  }, []);*/
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -33,17 +34,17 @@ const Home = () => {
 
   return (
     <div>
-      <Header />
+      <Header className="test1" />
       <Hero />
-      <Banner judul="Kategori Produk" />
+      <Banner judul="Kategori Produk" text="007" />
       <Category />
       <Banner judul="Produk Terbaru" />
 
       <div className="content-wrapper">
-        {currentPost.map((data) => {
+        {data.produk.map((data) => {
           return (
             <List_products
-              key={data.id}
+              key={data._id}
               title={data.title}
               category={data.category}
               price={data.price}
